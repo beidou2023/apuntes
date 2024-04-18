@@ -1,0 +1,20 @@
+<Window x:Class="Ejercicio2Matrices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio2Matrices"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="396" Width="706">
+    <Grid>
+        <TextBox x:Name="txb_Nfilas" HorizontalAlignment="Left" Margin="106,62,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="38" FontSize="15"/>
+        <TextBox x:Name="txb_Mcolumnas" HorizontalAlignment="Left" Margin="106,128,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="38" FontSize="15"/>
+        <Button x:Name="btn_calcular" Content="CALCULAR" HorizontalAlignment="Left" Margin="22,190,0,0" VerticalAlignment="Top" Height="57" Width="158" Click="btn_calcular_Click" FontSize="28" Background="LightGreen" Foreground="DarkBlue"/>
+        <Label x:Name="lbl_resultado" Content="MR" HorizontalAlignment="Left" Margin="483,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_matriz1" Content="M1" HorizontalAlignment="Left" Margin="215,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lbl_matriz2" Content="M2" HorizontalAlignment="Left" Margin="348,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Numero&#xD;&#xA;Filas:" HorizontalAlignment="Left" Margin="22,48,0,0" VerticalAlignment="Top" FontSize="15" Foreground="Red"/>
+        <Label Content="Numero&#xA;Columnas:" HorizontalAlignment="Left" Margin="22,114,0,0" VerticalAlignment="Top" FontSize="15" Foreground="Red"/>
+
+    </Grid>
+</Window>
