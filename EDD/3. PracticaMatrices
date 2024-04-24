@@ -1,0 +1,65 @@
+using System.Windows;
+
+namespace PracticaMatrices
+{
+    public partial class MainWindow : Window
+    {
+        int fila = 0, columna = 0;
+        double [ , ] Matriz,Matriz2;
+        Random NumeroAleatorio= new Random();
+        
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void btn_mostrar_Click(object sender, RoutedEventArgs e)
+        {
+            fila = Convert.ToInt32(txb_fila.Text);
+            columna = Convert.ToInt32(txb_columna.Text);
+            Matriz = new double[fila, columna];
+            Matriz2 = new double[fila, columna];
+            Matriz =GenerarNumerosAleatorios(Matriz);
+            Matriz2=DuplicarYCalcular(Matriz,Matriz2);
+            MostarMatrices(Matriz, Matriz2);
+        }
+
+        public double[,] GenerarNumerosAleatorios(double[,] Matriz)
+        {
+            for (int i = 0; i < fila; i++)
+                for (int j = 0; j < columna; j++)
+                    Matriz[i,j]= NumeroAleatorio.Next(1,11);
+            return Matriz;
+        }
+
+        public double[,] DuplicarYCalcular(double[,] Matriz, double[,] Matriz2)
+        {
+            for (int i = 0; i < fila; i++)
+                for (int j = 0; j < columna; j++)
+                {
+                    if (Matriz[i, j] % 2 == 0)
+                        Matriz2[i, j] = Math.Pow(Matriz[i, j],2);
+                    else
+                        Matriz2[i, j] = Math.Pow(Matriz[i, j], 3);
+            }
+            return Matriz2;
+        }
+
+        public void MostarMatrices(double[,] Matriz1, double[,] Matriz2)
+        {
+            lbl_matriz1.Content = "";
+            lbl_matriz2.Content = "";
+            for (int i = 0; i < fila; i++)
+            {
+                for (int j = 0; j < columna; j++)
+                {
+                    lbl_matriz1.Content += Matriz1[i, j] + "  ";
+                    lbl_matriz2.Content += Matriz2[i, j] + "  ";
+                    
+                }
+                lbl_matriz1.Content += "\n\n";
+                lbl_matriz2.Content += "\n\n";
+            }
+        }
+    }
+}
