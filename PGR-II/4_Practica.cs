@@ -1,3 +1,12 @@
+*/Realizar un programa que lea una contraseña 
+y verifique en 5 niveles
+N1 contraseña tiene que ser más de 8 caracteres
+N2 lo del anterior,y sin espacio
+N3 lo del anterior y al menos 1 mayúscula y minúscula 
+N4 lo del anterior y un carácter especial 
+N5 lo del anterior y un número
+/*
+
 using System.Windows;
 
 namespace Examen2
